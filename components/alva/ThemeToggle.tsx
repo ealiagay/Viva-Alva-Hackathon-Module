@@ -8,11 +8,27 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="absolute top-4 right-4 z-40 px-4 py-2 rounded-full glass bg-white/20 hover:bg-white/30 transition-all text-white font-medium flex items-center gap-2"
       aria-label="Toggle theme"
+      className="absolute top-4 right-4 z-40 transition-all active:scale-90"
+      style={{
+        width: '38px',
+        height: '38px',
+        borderRadius: '50%',
+        background: isDark
+          ? 'rgba(255,255,255,0.08)'
+          : 'rgba(0,0,0,0.08)',
+        border: isDark
+          ? '1px solid rgba(255,255,255,0.12)'
+          : '1px solid rgba(0,0,0,0.1)',
+        backdropFilter: 'blur(12px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '16px',
+        boxShadow: '0 2px 12px rgba(0,0,0,0.2)',
+      }}
     >
-      <span>{isDark ? '☀️' : '🌙'}</span>
-      <span className="text-sm">{isDark ? 'Light' : 'Dark'}</span>
+      {isDark ? '☀️' : '🌙'}
     </button>
   );
 }
