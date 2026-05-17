@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react';
 import { Search, Navigation, X, Star } from 'lucide-react';
 
 const mockStores = [
-  { id: 1, name: 'Burger Palace', emoji: '🍔', x: 20, y: 20, alvitas: 50, category: 'Restaurante', distance: '120m', rating: 4.8 },
-  { id: 2, name: 'Coffee Corner', emoji: '☕', x: 72, y: 18, alvitas: 30, category: 'Cafetería', distance: '280m', rating: 4.5 },
-  { id: 3, name: 'Fashion Hub', emoji: '🛍️', x: 50, y: 44, alvitas: 75, category: 'Tienda', distance: '95m', rating: 4.9 },
-  { id: 4, name: 'Pizza Place', emoji: '🍕', x: 78, y: 62, alvitas: 60, category: 'Restaurante', distance: '340m', rating: 4.6 },
-  { id: 5, name: 'Taco Stand', emoji: '🌮', x: 15, y: 65, alvitas: 40, category: 'Comida', distance: '210m', rating: 4.3 },
-  { id: 6, name: 'Sushi Go', emoji: '🍱', x: 60, y: 28, alvitas: 80, category: 'Japonés', distance: '180m', rating: 4.9 },
+  { id: 1, name: 'Burger Palace', emoji: '🍔', x: 20, y: 20, VAVIs: 50, category: 'Restaurante', distance: '120m', rating: 4.8 },
+  { id: 2, name: 'Coffee Corner', emoji: '☕', x: 72, y: 18, VAVIs: 30, category: 'Cafetería', distance: '280m', rating: 4.5 },
+  { id: 3, name: 'Fashion Hub', emoji: '🛍️', x: 50, y: 44, VAVIs: 75, category: 'Tienda', distance: '95m', rating: 4.9 },
+  { id: 4, name: 'Pizza Place', emoji: '🍕', x: 78, y: 62, VAVIs: 60, category: 'Restaurante', distance: '340m', rating: 4.6 },
+  { id: 5, name: 'Taco Stand', emoji: '🌮', x: 15, y: 65, VAVIs: 40, category: 'Comida', distance: '210m', rating: 4.3 },
+  { id: 6, name: 'Sushi Go', emoji: '🍱', x: 60, y: 28, VAVIs: 80, category: 'Japonés', distance: '180m', rating: 4.9 },
 ];
 
 interface MapScreenProps {
@@ -242,7 +242,7 @@ export function MapScreen({ isDark = true }: MapScreenProps) {
                   {store.emoji}
                 </text>
 
-                {/* Alvitas badge sobre el pin */}
+                {/* VAVIs badge sobre el pin */}
                 {!isSelected && (
                   <g>
                     <rect
@@ -262,7 +262,7 @@ export function MapScreen({ isDark = true }: MapScreenProps) {
                       fontWeight="bold"
                       style={{ userSelect: 'none', pointerEvents: 'none' }}
                     >
-                      🪙{store.alvitas}
+                      🪙{store.VAVIs}
                     </text>
                   </g>
                 )}
@@ -332,7 +332,7 @@ export function MapScreen({ isDark = true }: MapScreenProps) {
             >
               <span className="text-sm">🪙</span>
               <span className="font-bold text-sm" style={{ color: '#bde635' }}>
-                {selected.alvitas} alvitas
+                {selected.VAVIs} VAVIs
               </span>
               <span className="text-xs ml-auto" style={{ color: '#6b7280' }}>al visitar</span>
             </div>
@@ -430,7 +430,7 @@ export function MapScreen({ isDark = true }: MapScreenProps) {
               <span style={{ fontSize: '16px' }}>{store.emoji}</span>
               <div className="text-left">
                 <p className="text-white text-xs font-semibold">{store.name}</p>
-                <p className="text-xs" style={{ color: '#bde635' }}>🪙{store.alvitas} · {store.distance}</p>
+                <p className="text-xs" style={{ color: '#bde635' }}>🪙{store.VAVIs} · {store.distance}</p>
               </div>
             </button>
           ))}

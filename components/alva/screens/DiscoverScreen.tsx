@@ -53,7 +53,7 @@ const mockCards = [
 const mockComments = [
   { id: 1, user: 'María G.', avatar: '👩', text: '¡La mejor hamburguesa de La Paz! 🔥', time: '2m' },
   { id: 2, user: 'Carlos R.', avatar: '👨', text: 'Fui ayer, increíble el servicio', time: '15m' },
-  { id: 3, user: 'Ana P.', avatar: '👩‍🦱', text: 'Las alvitas que gané las usé de descuento 🪙', time: '1h' },
+  { id: 3, user: 'Ana P.', avatar: '👩‍🦱', text: 'Las VAVIs que gané las usé de descuento 🪙', time: '1h' },
   { id: 4, user: 'Diego M.', avatar: '🧑', text: 'Recomendadísimo para el almuerzo', time: '2h' },
   { id: 5, user: 'Sofía L.', avatar: '👧', text: '¿Aceptan tarjeta? Pregunta real jaja', time: '3h' },
 ];
@@ -171,7 +171,7 @@ export function DiscoverScreen({ isDark = true }: DiscoverScreenProps) {
                 backdropFilter: 'blur(8px)',
               }}
             >
-              🪙 Gana {card.coins} alvitas al visitar
+              🪙 Gana {card.coins} VAVIs al visitar
             </div>
           </div>
 

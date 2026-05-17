@@ -45,7 +45,7 @@ export function WalletScreen({ isDark = true }: WalletScreenProps) {
         >
           1,250
         </div>
-        <div className="text-white text-base font-medium opacity-80">Alvitas</div>
+        <div className="text-white text-base font-medium opacity-80">VAVIs</div>
       </div>
 
       {/* QR Button */}

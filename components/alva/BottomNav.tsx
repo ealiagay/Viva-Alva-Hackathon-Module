@@ -65,7 +65,7 @@ export function BottomNav({ activeTab, onTabChange, isDark = true }: BottomNavPr
                   className="text-[9px] font-semibold mt-1.5"
                   style={{ color: activeTab === tab.id ? '#bde635' : isDark ? '#666' : '#999' }}
                 >
-                  Alvitas
+                  VAVIs
                 </span>
               </div>
             );
