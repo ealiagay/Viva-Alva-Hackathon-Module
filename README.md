@@ -30,3 +30,19 @@ El prototipo está construido priorizando una interfaz fluida (Mobile-First) y a
 * **Estilos:** Tailwind CSS
 * **Iconografía:** Lucide React
 * **Gestión de Datos:** Simulada mediante JSON.
+
+---
+
+## 📥 Descarga del Repositorio
+
+El código fuente de este prototipo está alojado en GitHub. Puedes clonar el repositorio para ejecutarlo localmente:
+
+**1. Clonar el repositorio:**
+```bash
+> git clone https://github.com/ealiagay/Viva-Alva-Hackathon-Module.git
+
+```
+**2. Entrar al directorio:**
+```bash
+> cd Viva-Alva-Hackathon-Module
+```
