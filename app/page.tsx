@@ -10,10 +10,14 @@ import { MapScreen } from '@/components/alva/screens/MapScreen';
 import { WalletScreen } from '@/components/alva/screens/WalletScreen';
 import { CommunityScreen } from '@/components/alva/screens/CommunityScreen';
 import { VivaFridayScreen } from '@/components/alva/screens/VivaFridayScreen';
+import { LoginScreen } from '@/components/alva/screens/LoginScreen'; // Importamos el nuevo módulo
 
 function HomeContent() {
   const { isDark } = useTheme();
   const [activeTab, setActiveTab] = useState('discover');
+  
+  // Estado global para controlar la sesión interactiva del Demo
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const renderScreen = () => {
     switch (activeTab) {
@@ -37,16 +41,26 @@ function HomeContent() {
   return (
     <ScreenContainer>
       <div className="relative h-full w-full" style={{ backgroundColor: bgColor }}>
-        {/* Theme toggle */}
+        {/* Theme toggle siempre visible para interactividad */}
         <ThemeToggle />
 
-        {/* Screen content */}
-        <div className="h-full w-full overflow-hidden">
-          {renderScreen()}
-        </div>
+        {/* Condicional: Si no está logueado, muestra el flujo de detección automática SIM */}
+        {!isLoggedIn ? (
+          <LoginScreen 
+            isDark={isDark} 
+            onLoginSuccess={() => setIsLoggedIn(true)} 
+          />
+        ) : (
+          <>
+            {/* Screen content de la Super App cuando el logueo automático fue exitoso */}
+            <div className="h-full w-full overflow-hidden">
+              {renderScreen()}
+            </div>
 
-        {/* Bottom navigation */}
-        <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isDark={isDark} />
+            {/* Bottom navigation */}
+            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} isDark={isDark} />
+          </>
+        )}
       </div>
     </ScreenContainer>
   );
