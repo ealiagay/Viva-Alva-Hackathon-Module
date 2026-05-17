@@ -8,9 +8,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-plus-jakarta-sans' });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Viva-Alva',
+  description: 'Hackaton',
+  generator: 'Viva-Alva',
   icons: {
     icon: [
       {
